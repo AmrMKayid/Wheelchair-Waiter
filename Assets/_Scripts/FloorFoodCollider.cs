@@ -17,7 +17,16 @@ public class FloorFoodCollider : MonoBehaviour
         Debug.Log(other.tag);
         if (other.tag.Equals("FoodObj"))
         {
-            Destroy(other);
+            Debug.Log("detroy item");
+            if (other.GetComponent<FlyingFood>() == null)
+            {
+                Debug.Log("other not root of food");
+            }
+            if (other.gameObject.GetComponent<FlyingFood>() == null)
+            {
+                Debug.Log("other.gameobject not root of food");
+            }
+            Destroy(other.gameObject);
         }
     }
 
