@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 8bf3426e6392640e2a7b58c891b678c0
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bones
+    100002: Dino
+    100004: //RootNode
+    100006: FK_Neck_null
+    100008: Head_null
+    100010: Jaw_00_jnt
+    100012: Jaw_01_jnt
+    100014: Jaw_null
+    100016: L_Back_Leg_null
+    100018: L_Back_Leg_pole
+    100020: L_Back_Leg_pole_2_2
+    100022: L_Femur_00_jnt
+    100024: L_Front_Leg_null
+    100026: L_Front_leg_pole
+    100028: L_Front_leg_pole_2_2
+    100030: L_Humerus_01_jnt
+    100032: L_Metacarpua_03_jnt
+    100034: L_Metatarsus_02_jnt
+    100036: L_Paw_04_jnt
+    100038: L_Paw_Tip_05_jnt
+    100040: L_Phalanges_03_jnt
+    100042: L_Phanges_04_jnt
+    100044: L_Scapula_00_jnt
+    100046: L_Tibia_Fibula_01_jnt
+    100048: L_Unla_Radius_02_jnt
+    100050: Neck_FK_00_jnt
+    100052: Neck_FK_01_jnt
+    100054: Neck_FK_02_jnt
+    100056: Neck_FK_end_jnt
+    100058: R_Back_Leg_null
+    100060: R_Back_Leg_pole
+    100062: R_Back_Leg_pole_2_2
+    100064: R_Femur_00_jnt
+    100066: R_Front_Leg_null
+    100068: R_Front_leg_pole
+    100070: R_Front_leg_pole_2_2
+    100072: R_Humerus_01_jnt
+    100074: R_Metacarpua_03_jnt
+    100076: R_Metatarsus_02_jnt
+    100078: R_Paw_04_jnt
+    100080: R_Paw_Tip_05_jnt
+    100082: R_Phalanges_03_jnt
+    100084: R_Phanges_04_jnt
+    100086: R_Scapula_00_jnt
+    100088: R_Tibia_Fibula_01_jnt
+    100090: R_Unla_Radius_02_jnt
+    100092: Root_jnt
+    100094: Skull_00_jnt
+    100096: Skull_01_jnt
+    100098: Spine_00_jnt
+    100100: Spine_01_jnt
+    100102: Spine_02_jnt
+    100104: Spine_03_jnt
+    100106: Spine_04_jnt
+    100108: Spine_05_jnt
+    100110: Spine_06_jnt
+    100112: Spine_07_jnt
+    100114: Spine_08_jnt
+    100116: Spine_null
+    100118: Tail
+    100120: Tail_00_jnt
+    100122: Tail_01_jnt
+    100124: Tail_02_jnt
+    100126: Tail_03_jnt
+    100128: Tail_04_jnt
+    100130: Teeth
+    400000: Bones
+    400002: Dino
+    400004: //RootNode
+    400006: FK_Neck_null
+    400008: Head_null
+    400010: Jaw_00_jnt
+    400012: Jaw_01_jnt
+    400014: Jaw_null
+    400016: L_Back_Leg_null
+    400018: L_Back_Leg_pole
+    400020: L_Back_Leg_pole_2_2
+    400022: L_Femur_00_jnt
+    400024: L_Front_Leg_null
+    400026: L_Front_leg_pole
+    400028: L_Front_leg_pole_2_2
+    400030: L_Humerus_01_jnt
+    400032: L_Metacarpua_03_jnt
+    400034: L_Metatarsus_02_jnt
+    400036: L_Paw_04_jnt
+    400038: L_Paw_Tip_05_jnt
+    400040: L_Phalanges_03_jnt
+    400042: L_Phanges_04_jnt
+    400044: L_Scapula_00_jnt
+    400046: L_Tibia_Fibula_01_jnt
+    400048: L_Unla_Radius_02_jnt
+    400050: Neck_FK_00_jnt
+    400052: Neck_FK_01_jnt
+    400054: Neck_FK_02_jnt
+    400056: Neck_FK_end_jnt
+    400058: R_Back_Leg_null
+    400060: R_Back_Leg_pole
+    400062: R_Back_Leg_pole_2_2
+    400064: R_Femur_00_jnt
+    400066: R_Front_Leg_null
+    400068: R_Front_leg_pole
+    400070: R_Front_leg_pole_2_2
+    400072: R_Humerus_01_jnt
+    400074: R_Metacarpua_03_jnt
+    400076: R_Metatarsus_02_jnt
+    400078: R_Paw_04_jnt
+    400080: R_Paw_Tip_05_jnt
+    400082: R_Phalanges_03_jnt
+    400084: R_Phanges_04_jnt
+    400086: R_Scapula_00_jnt
+    400088: R_Tibia_Fibula_01_jnt
+    400090: R_Unla_Radius_02_jnt
+    400092: Root_jnt
+    400094: Skull_00_jnt
+    400096: Skull_01_jnt
+    400098: Spine_00_jnt
+    400100: Spine_01_jnt
+    400102: Spine_02_jnt
+    400104: Spine_03_jnt
+    400106: Spine_04_jnt
+    400108: Spine_05_jnt
+    400110: Spine_06_jnt
+    400112: Spine_07_jnt
+    400114: Spine_08_jnt
+    400116: Spine_null
+    400118: Tail
+    400120: Tail_00_jnt
+    400122: Tail_01_jnt
+    400124: Tail_02_jnt
+    400126: Tail_03_jnt
+    400128: Tail_04_jnt
+    400130: Teeth
+    2100000: Dino
+    2100002: Teeth
+    4300000: Dino
+    4300002: Teeth
+    7400000: ________ _____
+    9500000: //RootNode
+    13700000: Dino
+    13700002: Teeth
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dino_normal
+    second: {fileID: 2800000, guid: 84e196d037e8949d49ea44a2abec0f3b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dino_spec
+    second: {fileID: 2800000, guid: 4129886d635724239b082417e2fb3956, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Donosaurus
+    second: {fileID: 2800000, guid: 865ac5989dbe4446ba567690d57796ba, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ________ _____
+      takeName: ________ _____
+      firstFrame: 0
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
