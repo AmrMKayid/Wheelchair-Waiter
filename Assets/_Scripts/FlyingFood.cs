@@ -11,7 +11,6 @@ public class FlyingFood : MonoBehaviour
 
     private Rigidbody rbody;
     private static float maxSpeed = 7;// limit the speed of the plate falling down
-    private FoodColorEnum tableColor;
 
     private void Start()
     {
@@ -22,11 +21,20 @@ public class FlyingFood : MonoBehaviour
     {
         if (rbody.velocity.y < 0 && rbody.velocity.magnitude > maxSpeed)
         {
-            Debug.Log("lowering falling speed");
             rbody.velocity = rbody.velocity.normalized * maxSpeed;
         }
         if (transform.position.y < 0)
         {
+            Debug.Log("Position destroy");
+            OnCollisionWithFloor();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("floorTag"))
+        {
+            Debug.Log("Collision destroy");
             OnCollisionWithFloor();
         }
     }
@@ -34,12 +42,18 @@ public class FlyingFood : MonoBehaviour
     private void OnCollisionWithFloor()
     {
         // play sound
-        AudioSource plateCrashSound = gameObject.GetComponentInChildren<AudioSource>();
-        plateCrashSound.Play();
+        GetComponent<AudioSource>().Play();
+        GetComponent<VRTK.VRTK_InteractableObject>().isUsable = false;
 
         // decrease life left
 
         // remove plate
+        StartCoroutine(DeleteAfterSound());
+    }
+
+    private IEnumerator DeleteAfterSound()
+    {
+        yield return new WaitForSeconds(4);
         Destroy(gameObject);
     }
 
@@ -50,18 +64,19 @@ public class FlyingFood : MonoBehaviour
 
     public void SetTableColor(FoodColorEnum tableColor)
     {
-        this.tableColor = tableColor;
-        MeshRenderer renderer = GetComponent<MeshRenderer>();
         switch (tableColor)
         {
             case FoodColorEnum.red:
-                renderer.material = RedMaterial;
+                gameObject.tag = "PlateRedTag";
+                GetComponent<MeshRenderer>().material = RedMaterial;
                 break;
             case FoodColorEnum.green:
-                renderer.material = GreenMaterial;
+                gameObject.tag = "PlateGreenTag";
+                GetComponent<MeshRenderer>().material = GreenMaterial;
                 break;
             case FoodColorEnum.blue:
-                renderer.material = BlueMaterial;
+                gameObject.tag = "PlateBlueTag";
+                GetComponent<MeshRenderer>().material = BlueMaterial;
                 break;
         }
     }

@@ -16,6 +16,7 @@ TagManager:
   - ExcludeTeleport
   - PlateRedTag
   - PlateGreenTag
+  - PlateBlueTag
   layers:
   - Default
   - TransparentFX

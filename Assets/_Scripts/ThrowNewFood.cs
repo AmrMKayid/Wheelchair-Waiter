@@ -7,7 +7,6 @@ public class ThrowNewFood : MonoBehaviour
 {
 
     public GameObject foodGameObject;
-    private AudioSource dingSound;
 
     public float forceScale = 10;
     public float rotationY = 0;
@@ -18,7 +17,6 @@ public class ThrowNewFood : MonoBehaviour
     void Start()
     {
         Physics.gravity = new Vector3(0, -10, 0);
-        dingSound = GetComponentInChildren<AudioSource>();
         StartCoroutine(CreateFoodLoop());
     }
 
@@ -43,16 +41,18 @@ public class ThrowNewFood : MonoBehaviour
     {
         while (true)
         {
-            GameObject newFood = Instantiate(foodGameObject, transform.position, Quaternion.identity);
-            newFood.SetActive(true);
-           // newFood.GetComponent<Rigidbody>().isKinematic = true;
-            FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
-            
-            flyingFood.ApplyForce(CalculateFixedForceVector());
-            //flyingFood.GetComponent<Rigidbody>().isKinematic = true;
-            flyingFood.SetTableColor(CalculateTableColor());
-            dingSound.Play();
+            GetComponent<AudioSource>().Play();
 
+            GameObject newFood = Instantiate(foodGameObject, transform.position + Vector3.up * 0.1f, Quaternion.identity);
+            newFood.transform.rotation = Quaternion.Euler(-90, 0, 0);
+            newFood.SetActive(true);
+            newFood.GetComponent<Rigidbody>().useGravity = false;
+            FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
+            flyingFood.SetTableColor(CalculateTableColor());
+            yield return new WaitForSeconds(1);
+
+            newFood.GetComponent<Rigidbody>().useGravity = true;
+            flyingFood.ApplyForce(CalculateFixedForceVector());
             yield return new WaitForSeconds(2);
         }
     }
@@ -74,7 +74,6 @@ public class ThrowNewFood : MonoBehaviour
         float forward = Random.Range(-6 * forceScale, -5 * forceScale) + 0;
         Vector3 forceVector = new Vector3(right, up, forward);
         return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
-
     }
 
     private FoodColorEnum CalculateTableColor()
