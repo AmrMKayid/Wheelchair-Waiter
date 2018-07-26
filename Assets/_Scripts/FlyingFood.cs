@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
-
+using VRTK;
 public class FlyingFood : MonoBehaviour
 {
 
@@ -19,14 +20,14 @@ public class FlyingFood : MonoBehaviour
 
     private void Update()
     {
-        if (rbody.velocity.y < 0 && rbody.velocity.magnitude > maxSpeed)
-        {
-            rbody.velocity = rbody.velocity.normalized * maxSpeed;
-        }
-        if (transform.position.y < 0)
+        //if (rbody.velocity.y < 0 && rbody.velocity.magnitude > maxSpeed)
+        //{
+          //  rbody.velocity = rbody.velocity.normalized * maxSpeed;
+        //}
+        if (transform.position.y < -25)
         {
             Debug.Log("Position destroy");
-            OnCollisionWithFloor();
+           // OnCollisionWithFloor();
         }
     }
 
@@ -35,7 +36,7 @@ public class FlyingFood : MonoBehaviour
         if (collision.gameObject.tag.Equals("floorTag"))
         {
             Debug.Log("Collision destroy");
-            OnCollisionWithFloor();
+            //OnCollisionWithFloor();
         }
     }
 
@@ -51,6 +52,7 @@ public class FlyingFood : MonoBehaviour
         StartCoroutine(DeleteAfterSound());
     }
 
+   
     private IEnumerator DeleteAfterSound()
     {
         yield return new WaitForSeconds(4);
