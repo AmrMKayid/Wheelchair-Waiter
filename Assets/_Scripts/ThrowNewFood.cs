@@ -78,7 +78,7 @@ public class ThrowNewFood : MonoBehaviour
 
     private FoodColorEnum CalculateTableColor()
     {
-        return (FoodColorEnum)Random.Range(0, 3);
+        return (FoodColorEnum)Random.Range(0, 2);
     }
 
 }
