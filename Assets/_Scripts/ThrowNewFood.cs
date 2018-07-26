@@ -7,6 +7,8 @@ public class ThrowNewFood : MonoBehaviour
 {
 
     public GameObject foodGameObject;
+    private AudioSource dingSound;
+
     public float forceScale = 10;
     public float rotationY = 0;
 
@@ -16,6 +18,7 @@ public class ThrowNewFood : MonoBehaviour
     void Start()
     {
         Physics.gravity = new Vector3(0, -10, 0);
+        dingSound = GetComponentInChildren<AudioSource>();
         StartCoroutine(CreateFoodLoop());
     }
 
@@ -45,6 +48,7 @@ public class ThrowNewFood : MonoBehaviour
             FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
             flyingFood.ApplyForce(CalculateFixedForceVector());
             flyingFood.SetTableColor(CalculateTableColor());
+            dingSound.Play();
 
             yield return new WaitForSeconds(2);
         }
@@ -54,7 +58,7 @@ public class ThrowNewFood : MonoBehaviour
     {
         float right = 2 * forceScale;
         float up = 10 * forceScale;
-        float forward =2*forceScale;
+        float forward = 2 * forceScale;
         Vector3 forceVector = new Vector3(right, up, forward);
         return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
     }

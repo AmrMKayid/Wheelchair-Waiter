@@ -29,8 +29,10 @@ public class FlyingFood : MonoBehaviour
     private void OnCollisionWithFloor()
     {
         // play sound
+        AudioSource plateCrashSound = gameObject.GetComponentInChildren<AudioSource>();
+        plateCrashSound.Play();
 
-        // decrese life left
+        // decrease life left
 
         // remove plate
         Destroy(gameObject);
