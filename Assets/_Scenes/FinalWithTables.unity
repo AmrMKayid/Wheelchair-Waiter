@@ -4044,8 +4044,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodGameObject: {fileID: 1598089941}
-  forceScale: 60
-  rotationY: 260
+  forceScale: 63
+  rotationY: 271
 --- !u!4 &676051118
 Transform:
   m_ObjectHideFlags: 0
