@@ -18,6 +18,24 @@ public class FlyingFood : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (transform.position.y < 0)
+        {
+            OnCollisionWithFloor();
+        }
+    }
+
+    private void OnCollisionWithFloor()
+    {
+        // play sound
+
+        // decrese life left
+
+        // remove plate
+        Destroy(gameObject);
+    }
+
     public void ApplyForce(Vector3 forceVector)
     {
         GetComponent<Rigidbody>().AddForce(forceVector);
@@ -46,5 +64,5 @@ public class FlyingFood : MonoBehaviour
         }
     }
 
-  
+
 }
