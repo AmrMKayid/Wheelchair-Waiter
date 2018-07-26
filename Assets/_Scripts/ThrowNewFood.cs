@@ -7,6 +7,8 @@ public class ThrowNewFood : MonoBehaviour
 {
 
     public GameObject foodGameObject;
+    public float forceScale = 10;
+    public float rotationY = 0;
 
     bool throwNewFood = true;
 
@@ -38,7 +40,8 @@ public class ThrowNewFood : MonoBehaviour
     {
         while (true)
         {
-            GameObject newFood = Instantiate(foodGameObject, transform.position , Quaternion.identity);
+            GameObject newFood = Instantiate(foodGameObject, transform.position, Quaternion.identity);
+            newFood.SetActive(true);
             FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
             flyingFood.ApplyForce(CalculateForceVector());
             flyingFood.SetTableColor(CalculateTableColor());
@@ -49,10 +52,12 @@ public class ThrowNewFood : MonoBehaviour
 
     private Vector3 CalculateForceVector()
     {
-        float right = Random.Range(150, 400) + 0;
-        float up = Random.Range(600, 800) + 0;
-        float forward = Random.Range(-600, -500) + 0;
-        return new Vector3(right, up, forward);
+        float right = Random.Range(1.5f * forceScale, 4 * forceScale) + 0;
+        float up = Random.Range(10 * forceScale, 12 * forceScale) + 0;
+        float forward = Random.Range(-6 * forceScale, -5 * forceScale) + 0;
+        Vector3 forceVector = new Vector3(right, up, forward);
+        return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
+
     }
 
     private FoodColorEnum CalculateTableColor()
