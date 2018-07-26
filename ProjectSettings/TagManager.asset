@@ -13,6 +13,9 @@ TagManager:
   - Torso
   - OtherSaucers
   - floorTag
+  - ExcludeTeleport
+  - PlateRedTag
+  - PlateGreenTag
   layers:
   - Default
   - TransparentFX
