@@ -43,12 +43,22 @@ public class ThrowNewFood : MonoBehaviour
             GameObject newFood = Instantiate(foodGameObject, transform.position, Quaternion.identity);
             newFood.SetActive(true);
             FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
-            flyingFood.ApplyForce(CalculateForceVector());
+            flyingFood.ApplyForce(CalculateFixedForceVector());
             flyingFood.SetTableColor(CalculateTableColor());
 
             yield return new WaitForSeconds(2);
         }
     }
+
+    private Vector3 CalculateFixedForceVector()
+    {
+        float right = 2 * forceScale;
+        float up = 10 * forceScale;
+        float forward =2*forceScale;
+        Vector3 forceVector = new Vector3(right, up, forward);
+        return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
+    }
+
 
     private Vector3 CalculateForceVector()
     {
