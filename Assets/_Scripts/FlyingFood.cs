@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class FlyingFood : MonoBehaviour
 {
-    public GameObject redObject;
-    public GameObject greenObject;
-    public GameObject blueObject;
+
+    public Material RedMaterial;
+    public Material BlueMaterial;
+    public Material GreenMaterial;
 
     private Rigidbody rbody;
     private static float maxSpeed = 7;// limit the speed of the plate falling down
@@ -14,10 +15,6 @@ public class FlyingFood : MonoBehaviour
 
     private void Start()
     {
-        if (redObject == null || blueObject == null || greenObject == null)
-        {
-            Debug.Log("Set red/blue/green Object in FlyingFood Script in Unity Editor");
-        }
         rbody = GetComponent<Rigidbody>();
     }
 
@@ -54,22 +51,17 @@ public class FlyingFood : MonoBehaviour
     public void SetTableColor(FoodColorEnum tableColor)
     {
         this.tableColor = tableColor;
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
         switch (tableColor)
         {
             case FoodColorEnum.red:
-                redObject.tag = "FoodObj";
-                greenObject.SetActive(false);
-                blueObject.SetActive(false);
+                renderer.material = RedMaterial;
                 break;
             case FoodColorEnum.green:
-                redObject.SetActive(false);
-                greenObject.tag = "FoodObj";
-                blueObject.SetActive(false);
+                renderer.material = GreenMaterial;
                 break;
             case FoodColorEnum.blue:
-                redObject.SetActive(false);
-                greenObject.SetActive(false);
-                blueObject.tag = "FoodObj";
+                renderer.material = BlueMaterial;
                 break;
         }
     }

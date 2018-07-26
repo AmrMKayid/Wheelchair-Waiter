@@ -45,8 +45,11 @@ public class ThrowNewFood : MonoBehaviour
         {
             GameObject newFood = Instantiate(foodGameObject, transform.position, Quaternion.identity);
             newFood.SetActive(true);
+           // newFood.GetComponent<Rigidbody>().isKinematic = true;
             FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
+            
             flyingFood.ApplyForce(CalculateFixedForceVector());
+            //flyingFood.GetComponent<Rigidbody>().isKinematic = true;
             flyingFood.SetTableColor(CalculateTableColor());
             dingSound.Play();
 
