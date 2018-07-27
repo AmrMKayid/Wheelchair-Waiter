@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/FinalWithTables.unity
     guid: f2ce239a744b14a30b1095c6edf650f4
+  - enabled: 1
+    path: Assets/_Scenes/Level 1.unity
+    guid: f4e53e6b95ea66a49943da4e85a4edbf

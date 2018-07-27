@@ -16,6 +16,8 @@ public class ThrowNewFood : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GetComponent<AudioSource>().Play();
+
         Physics.gravity = new Vector3(0, -10, 0);
         StartCoroutine(CreateFoodLoop());
     }

@@ -3808,6 +3808,16 @@ Prefab:
       propertyPath: m_Name
       value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 114950459217865084, guid: 79cda1fb8a30d6f4e83f1aba209be8b8,
+        type: 2}
+      propertyPath: allowedTouchControllers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950459217865084, guid: 79cda1fb8a30d6f4e83f1aba209be8b8,
+        type: 2}
+      propertyPath: allowedGrabControllers
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 82328441206014020, guid: 79cda1fb8a30d6f4e83f1aba209be8b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 79cda1fb8a30d6f4e83f1aba209be8b8, type: 2}
@@ -17000,7 +17010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1149190699
 Transform:
   m_ObjectHideFlags: 0
@@ -28672,6 +28682,7 @@ Transform:
   - {fileID: 906466865}
   - {fileID: 143188750}
   - {fileID: 2100594799}
+  - {fileID: 2140421249}
   - {fileID: 1067387356}
   - {fileID: 1623617416}
   - {fileID: 1205199331}
@@ -28683,7 +28694,6 @@ Transform:
   - {fileID: 166058542}
   - {fileID: 1979592687}
   - {fileID: 1136448985}
-  - {fileID: 2140421249}
   - {fileID: 2021694689}
   - {fileID: 685786875}
   - {fileID: 559027036}

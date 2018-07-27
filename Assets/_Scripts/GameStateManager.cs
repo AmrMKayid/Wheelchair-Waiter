@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameStateManager : MonoBehaviour
@@ -26,11 +27,16 @@ public class GameStateManager : MonoBehaviour
     {
         // play sound
         score += 1;
+        
         textField.GetComponent<Text>().text = GetScoreText(score, lifes);
         Debug.Log("Scored " + score);
         yield return new WaitForSeconds(1);
         if (snapZone != null)
             Destroy(snapZone.GetComponentInChildren<FlyingFood>().gameObject);
+        if (score == 5)
+        {
+            SceneManager.LoadScene("AccidentScene");
+        }
     }
 
     public void LooseALife()

@@ -34,6 +34,6 @@ public class LetTextAppear : MonoBehaviour {
 		GetComponent<AudioSource>().Play();
 
 		yield return new WaitForSeconds(3F);
-		SceneManager.LoadScene("FinalWithTables");
+		SceneManager.LoadScene("Level2");
 	}
 }
