@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using VRTK;
 public class FlyingFood : MonoBehaviour
 {
@@ -9,13 +10,10 @@ public class FlyingFood : MonoBehaviour
     public Material RedMaterial;
     public Material BlueMaterial;
     public Material GreenMaterial;
-    public static void snapHandler(Object o, SnapDropZoneEventArgs args)
-    {
-        Debug.Log("Snapped");
-    }
+
     private Rigidbody rbody;
     private static float maxSpeed = 7;// limit the speed of the plate falling down
-    
+
 
     private void Start()
     {
@@ -24,7 +22,7 @@ public class FlyingFood : MonoBehaviour
 
     private void Update()
     {
-        
+
         if (rbody.velocity.y < 0 && rbody.velocity.magnitude > maxSpeed)
         {
             rbody.velocity = rbody.velocity.normalized * maxSpeed;
@@ -35,12 +33,12 @@ public class FlyingFood : MonoBehaviour
             OnCollisionWithFloor();
         }
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.Equals("floorTag"))
         {
-            Debug.Log("Collision destroy");
+            //Debug.Log("Collision destroy");
             OnCollisionWithFloor();
         }
     }
@@ -54,7 +52,7 @@ public class FlyingFood : MonoBehaviour
         // decrease life left
 
         // remove plate
-        StartCoroutine(DeleteAfterSound());
+        //StartCoroutine(DeleteAfterSound());
     }
 
 
@@ -64,13 +62,15 @@ public class FlyingFood : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public delegate void SnapDropZoneEventHandler(Object o, SnapDropZoneEventArgs args);
 
-    
+
+
     public void ApplyForce(Vector3 forceVector)
     {
         GetComponent<Rigidbody>().AddForce(forceVector);
     }
-    
+
     public void SetTableColor(FoodColorEnum tableColor)
     {
         switch (tableColor)

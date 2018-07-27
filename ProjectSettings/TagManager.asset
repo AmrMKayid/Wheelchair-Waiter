@@ -17,6 +17,7 @@ TagManager:
   - PlateRedTag
   - PlateGreenTag
   - PlateBlueTag
+  - TextTag
   layers:
   - Default
   - TransparentFX
