@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/AccidentScene.unity
+    guid: 928fc380f176170448a89ded53726f89
+  - enabled: 1
+    path: Assets/_Scenes/FinalWithTables.unity
+    guid: f2ce239a744b14a30b1095c6edf650f4
