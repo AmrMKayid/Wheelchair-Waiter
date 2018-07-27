@@ -2017,7 +2017,7 @@ Prefab:
     - target: {fileID: 13700002, guid: 02a93365012714dea8a95035a742979a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fc8327f5dbb8419489b93e1d9c42fde7, type: 2}
+      objectReference: {fileID: 2100000, guid: ab254fbf20b45f342b925f81f00eaab8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a93365012714dea8a95035a742979a, type: 3}
   m_IsPrefabParent: 0
@@ -10869,6 +10869,31 @@ MonoBehaviour:
   enableAdaptiveResolution: 0
   minRenderScale: 0.7
   maxRenderScale: 1
+  expandMixedRealityCapturePropertySheet: 0
+  enableMixedReality: 0
+  compositionMethod: 0
+  extraHiddenLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  capturingCameraDevice: 0
+  flipCameraFrameHorizontally: 0
+  flipCameraFrameVertically: 0
+  handPoseStateLatency: 0
+  sandwichCompositionRenderLatency: 0
+  sandwichCompositionBufferedFrames: 8
+  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
+  chromaKeySimilarity: 0.6
+  chromaKeySmoothRange: 0.03
+  chromaKeySpillRange: 0.06
+  useDynamicLighting: 0
+  depthQuality: 1
+  dynamicLightingSmoothFactor: 8
+  dynamicLightingDepthVariationClampingValue: 0.001
+  virtualGreenScreenType: 0
+  virtualGreenScreenTopY: 10
+  virtualGreenScreenBottomY: -10
+  virtualGreenScreenApplyDepthCulling: 0
+  virtualGreenScreenDepthTolerance: 0.2
   _trackingOriginType: 1
   usePositionTracking: 1
   useRotationTracking: 1
@@ -17115,10 +17140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPopulateObjectReferences: 1
-  actualBoundaries: {fileID: 0}
-  actualHeadset: {fileID: 0}
-  actualLeftController: {fileID: 0}
-  actualRightController: {fileID: 0}
+  actualBoundaries: {fileID: 762212579}
+  actualHeadset: {fileID: 1398157564}
+  actualLeftController: {fileID: 1353728301}
+  actualRightController: {fileID: 2029224653}
   modelAliasLeftController: {fileID: 0}
   modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
@@ -28645,9 +28670,8 @@ Transform:
   - {fileID: 1805052158}
   - {fileID: 1464809127}
   - {fileID: 906466865}
-  - {fileID: 143188750}
   - {fileID: 2100594799}
-  - {fileID: 2140421249}
+  - {fileID: 143188750}
   - {fileID: 1067387356}
   - {fileID: 1623617416}
   - {fileID: 1205199331}
@@ -28656,6 +28680,7 @@ Transform:
   - {fileID: 461198286}
   - {fileID: 1614341886}
   - {fileID: 1480997361}
+  - {fileID: 2140421249}
   - {fileID: 166058542}
   - {fileID: 1979592687}
   - {fileID: 1136448985}
@@ -29885,9 +29910,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cdafce6c57b453a4b84e20a2893a8533, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -29997,7 +30022,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 23c3a8bb6cb3943dfbc13df0b600a8a7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d568789ace7375342881e60cb7d93244, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -30077,7 +30102,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c8f420bf984534da98dd6a6aafe86720, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 75d597374135df943ba55cbfa24d3617, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
