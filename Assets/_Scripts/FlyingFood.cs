@@ -48,7 +48,7 @@ public class FlyingFood : MonoBehaviour
     private void OnCollisionWithFloor()
     {
         // play sound
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
         GetComponent<VRTK.VRTK_InteractableObject>().isUsable = false;
 
         // decrease life left

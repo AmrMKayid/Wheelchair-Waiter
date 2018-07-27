@@ -41,7 +41,7 @@ public class ThrowNewFood : MonoBehaviour
     {
         while (true)
         {
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().Play();
 
             GameObject newFood = Instantiate(foodGameObject, transform.position + Vector3.up * 0.1f, Quaternion.identity);
             newFood.transform.rotation = Quaternion.Euler(-90, 0, 0);
