@@ -1,41 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LetTextAppear : MonoBehaviour {
+public class LetTextAppear : MonoBehaviour
+{
 
-	private string str;
-		
-	// Update is called once per frame
-	void Update () {
 
-	}
+    public AudioClip message;
+    public AudioClip carSmash;
+    private  AudioSource audioSource;
+
+    // Update is called once per frame
+    private bool entered = false;
+    void Update () {
+        if(!audioSource.isPlaying && !entered)
+        {
+            entered = true;
+            audioSource.clip = carSmash;
+            audioSource.Play();
+            SceneManager.LoadScene("Level 2");
+
+        }
+    }
 	
-	void Start(){
-		
-		//Debug.Log("Using TextMesh " + text.ToString());
-		StartCoroutine(AnimateText("Going home after a long yet fruitful day at work, little did you know that your life is going to change forever!..."));
-	}
-
-	IEnumerator AnimateText(string strComplete){
-    	Text text = GetComponent<Text>();
-    	int i = 0;
-    	str = "";
-    	while( i < strComplete.Length ){
-        	str += strComplete[i++];
-        	Debug.Log("String: " + str);
-        	text.text = str;
-        	yield return new WaitForSeconds(0.05F);
-   		}
-
-		yield return new WaitForSeconds(0.05F);
-		GetComponent<AudioSource>().Play();
-
-		Debug.Log("CANVAAAAAS");
-
-		yield return new WaitForSeconds(3F);
-		SceneManager.LoadScene("Level 2");
-	}
+	void Start()
+	{
+	    audioSource = gameObject.GetComponent<AudioSource>();
+	    audioSource.clip = message;
+        audioSource.Play();
+	   
+	    
+    }
+    
 }

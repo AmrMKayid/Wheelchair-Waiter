@@ -450,8 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b0e15a3f8904ca890577a5686814a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 8300000, guid: 3600fbdddd1e94b449bdaf4ed3224c46, type: 3}
-  carSmash: {fileID: 8300000, guid: 515f070de305b40aaae852337b6e8e38, type: 3}
+  message: {fileID: 1760402684}
+  carSmash: {fileID: 1760402685}
 --- !u!114 &1760402687
 MonoBehaviour:
   m_ObjectHideFlags: 0
