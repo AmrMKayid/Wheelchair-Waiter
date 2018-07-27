@@ -245,6 +245,23 @@ MonoBehaviour:
   RedMaterial: {fileID: 2100000, guid: 30ce4dee3f0fcc3469f98196eea56fb7, type: 2}
   BlueMaterial: {fileID: 2100000, guid: ab254fbf20b45f342b925f81f00eaab8, type: 2}
   GreenMaterial: {fileID: 2100000, guid: fc8327f5dbb8419489b93e1d9c42fde7, type: 2}
+  OnFloorHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114054722856265696, guid: 073ad189f5d3dcd45a63a2460052d525,
+          type: 2}
+        m_MethodName: LooseALife
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114950459217865084
 MonoBehaviour:
   m_ObjectHideFlags: 1

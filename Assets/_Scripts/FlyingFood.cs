@@ -14,6 +14,8 @@ public class FlyingFood : MonoBehaviour
     private Rigidbody rbody;
     private static float maxSpeed = 7;// limit the speed of the plate falling down
 
+    public UnityEvent OnFloorHit = new UnityEvent();
+
 
     private void Start()
     {
@@ -38,7 +40,7 @@ public class FlyingFood : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("floorTag"))
         {
-            //Debug.Log("Collision destroy");
+            Debug.Log("Collision destroy");
             OnCollisionWithFloor();
         }
     }
@@ -50,21 +52,11 @@ public class FlyingFood : MonoBehaviour
         GetComponent<VRTK.VRTK_InteractableObject>().isUsable = false;
 
         // decrease life left
+        OnFloorHit.Invoke();
 
         // remove plate
-        //StartCoroutine(DeleteAfterSound());
-    }
-
-
-    private IEnumerator DeleteAfterSound()
-    {
-        yield return new WaitForSeconds(4);
         Destroy(gameObject);
     }
-
-    public delegate void SnapDropZoneEventHandler(Object o, SnapDropZoneEventArgs args);
-
-
 
     public void ApplyForce(Vector3 forceVector)
     {

@@ -59,9 +59,9 @@ public class ThrowNewFood : MonoBehaviour
 
     private Vector3 CalculateFixedForceVector()
     {
-        float right = 2 * forceScale;
-        float up = 10 * forceScale;
-        float forward = 2 * forceScale;
+        float right = 2.5f * forceScale;
+        float up = 11 * forceScale;
+        float forward = 2.5f * forceScale;
         Vector3 forceVector = new Vector3(right, up, forward);
         return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
     }
@@ -69,9 +69,9 @@ public class ThrowNewFood : MonoBehaviour
 
     private Vector3 CalculateForceVector()
     {
-        float right = Random.Range(1.5f * forceScale, 4 * forceScale) + 0;
-        float up = Random.Range(10 * forceScale, 12 * forceScale) + 0;
-        float forward = Random.Range(-6 * forceScale, -5 * forceScale) + 0;
+        float right = Random.Range(2f * forceScale, 2.5f * forceScale);
+        float up = Random.Range(10 * forceScale, 11 * forceScale);
+        float forward = Random.Range(2 * forceScale, 2.5f * forceScale);
         Vector3 forceVector = new Vector3(right, up, forward);
         return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
     }
