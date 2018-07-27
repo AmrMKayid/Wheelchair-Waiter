@@ -9,9 +9,13 @@ public class FlyingFood : MonoBehaviour
     public Material RedMaterial;
     public Material BlueMaterial;
     public Material GreenMaterial;
-
+    public static void snapHandler(Object o, SnapDropZoneEventArgs args)
+    {
+        Debug.Log("Snapped");
+    }
     private Rigidbody rbody;
     private static float maxSpeed = 7;// limit the speed of the plate falling down
+    
 
     private void Start()
     {
@@ -20,6 +24,7 @@ public class FlyingFood : MonoBehaviour
 
     private void Update()
     {
+        
         if (rbody.velocity.y < 0 && rbody.velocity.magnitude > maxSpeed)
         {
             rbody.velocity = rbody.velocity.normalized * maxSpeed;
@@ -30,7 +35,7 @@ public class FlyingFood : MonoBehaviour
             OnCollisionWithFloor();
         }
     }
-
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.Equals("floorTag"))
@@ -59,11 +64,13 @@ public class FlyingFood : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+    
     public void ApplyForce(Vector3 forceVector)
     {
         GetComponent<Rigidbody>().AddForce(forceVector);
     }
-
+    
     public void SetTableColor(FoodColorEnum tableColor)
     {
         switch (tableColor)
