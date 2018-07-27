@@ -49,19 +49,19 @@ public class ThrowNewFood : MonoBehaviour
             newFood.GetComponent<Rigidbody>().useGravity = false;
             FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
             flyingFood.SetTableColor(CalculateTableColor());
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
 
             newFood.GetComponent<Rigidbody>().useGravity = true;
-            flyingFood.ApplyForce(CalculateFixedForceVector());
-            yield return new WaitForSeconds(2);
+            flyingFood.ApplyForce(CalculateForceVectorWithRotation());
+            yield return new WaitForSeconds(5);
         }
     }
 
     private Vector3 CalculateFixedForceVector()
     {
-        float right = 2 * forceScale;
+        float right = 2.3f * forceScale;
         float up = 10 * forceScale;
-        float forward = 2 * forceScale;
+        float forward = 2.3f * forceScale;
         Vector3 forceVector = new Vector3(right, up, forward);
         return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
     }
@@ -69,11 +69,20 @@ public class ThrowNewFood : MonoBehaviour
 
     private Vector3 CalculateForceVector()
     {
-        float right = Random.Range(1.5f * forceScale, 4 * forceScale) + 0;
-        float up = Random.Range(10 * forceScale, 12 * forceScale) + 0;
-        float forward = Random.Range(-6 * forceScale, -5 * forceScale) + 0;
+        float right = Random.Range(2f * forceScale, 2.3f * forceScale);
+        float up = 10 * forceScale;
+        float forward = Random.Range(2 * forceScale, 2.3f * forceScale);
         Vector3 forceVector = new Vector3(right, up, forward);
         return Quaternion.AngleAxis(rotationY, Vector3.up) * forceVector;
+    }
+
+    private Vector3 CalculateForceVectorWithRotation()
+    {
+        float right = Random.Range(2f * forceScale, 2.2f * forceScale);
+        float up = 10 * forceScale;
+        float forward = Random.Range(2 * forceScale, 2.2f * forceScale);
+        Vector3 forceVector = new Vector3(right, up, forward);
+        return Quaternion.AngleAxis(Random.Range(rotationY - 4f, rotationY + 4f), Vector3.up) * forceVector;
     }
 
     private FoodColorEnum CalculateTableColor()

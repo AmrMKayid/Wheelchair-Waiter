@@ -9,7 +9,8 @@ public class GameStateManager : MonoBehaviour
     public GameObject textField;
     public GameObject redTableSnapZone;
     public GameObject greenTableSnapZone;
-    private int score = 0;
+    public static int score = 0;
+    public static int lifes = 10;
 
     public void RedSnapHandler()
     {
@@ -21,26 +22,44 @@ public class GameStateManager : MonoBehaviour
         StartCoroutine(SnapHandler(greenTableSnapZone));
     }
 
-    public IEnumerator SnapHandler(GameObject snapZone)
+    private IEnumerator SnapHandler(GameObject snapZone)
     {
-        score++;
-        textField.GetComponent<Text>().text = "Score : " + score;
-        Debug.Log("Snapped");
-
+        // play sound
+        score += 1;
+        textField.GetComponent<Text>().text = GetScoreText(score, lifes);
+        Debug.Log("Scored " + score);
         yield return new WaitForSeconds(1);
-        Destroy(snapZone.GetComponentInChildren<FlyingFood>().gameObject);
-
-
+        if (snapZone != null)
+            Destroy(snapZone.GetComponentInChildren<FlyingFood>().gameObject);
     }
 
-    // Use this for initialization
-    void Start()
+    public void LooseALife()
     {
+        lifes -= 1;
+        textField.GetComponent<Text>().text = GetScoreText(score, lifes);
+        Debug.Log("Life lost " + lifes);
+        if (lifes <= 0)
+        {
+            OnNoLifesLeft();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnNoLifesLeft()
     {
-
+        Debug.Log("Game Over - Start Accident");
+        //Get ready for next scene
+        lifes = 10;
     }
+
+
+    private string GetScoreText(int score, int lifes)
+    {
+        return "Score: " + score + "    " + "Lives: " + lifes;
+    }
+
+    private void Start()
+    {
+        textField.GetComponent<Text>().text = GetScoreText(score, lifes);
+    }
+
 }
