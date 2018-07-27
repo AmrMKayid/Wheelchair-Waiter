@@ -54,7 +54,7 @@ public class GameStateManager : MonoBehaviour
 
     private string GetScoreText(int score, int lifes)
     {
-        return "Score: " + score + "    " + "Lives: " + lifes;
+        return "Score: " + score ;
     }
 
     private void Start()
