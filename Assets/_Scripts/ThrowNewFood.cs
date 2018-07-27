@@ -11,12 +11,17 @@ public class ThrowNewFood : MonoBehaviour
     public float forceScale = 10;
     public float rotationY = 0;
 
+	public AudioSource redSource;
+	public AudioSource greenSource;
+	public AudioSource music;
+
     bool throwNewFood = true;
 
     // Use this for initialization
     void Start()
     {
-        GetComponent<AudioSource>().Play();
+		music.Play();
+
 
         Physics.gravity = new Vector3(0, -10, 0);
         StartCoroutine(CreateFoodLoop());
@@ -50,7 +55,13 @@ public class ThrowNewFood : MonoBehaviour
             newFood.SetActive(true);
             newFood.GetComponent<Rigidbody>().useGravity = false;
             FlyingFood flyingFood = newFood.GetComponent<FlyingFood>();
-            flyingFood.SetTableColor(CalculateTableColor());
+			FoodColorEnum color = CalculateTableColor();
+            flyingFood.SetTableColor(color);
+			if(color == FoodColorEnum.red) {
+				redSource.Play();
+			} else if (color == FoodColorEnum.green) {
+				greenSource.Play();
+			}
             yield return new WaitForSeconds(2);
 
             newFood.GetComponent<Rigidbody>().useGravity = true;

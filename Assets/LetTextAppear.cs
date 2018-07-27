@@ -33,7 +33,9 @@ public class LetTextAppear : MonoBehaviour {
 		yield return new WaitForSeconds(0.05F);
 		GetComponent<AudioSource>().Play();
 
+		Debug.Log("CANVAAAAAS");
+
 		yield return new WaitForSeconds(3F);
-		SceneManager.LoadScene("Level2");
+		SceneManager.LoadScene("Level 2");
 	}
 }
