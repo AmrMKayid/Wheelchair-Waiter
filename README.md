@@ -10,3 +10,8 @@ Using both job simulation and body swapping we managed to create a restaurant en
 - **Half-control Level**: the waiter loses his right hand and he should figure out who to deliver the orders in a faster way
 - **Disabled Level**: Wheelchair waiter with only one hand and a desire to win the game and achieve high score!
 
+
+### Contributors:
+
+| [<img src="https://avatars0.githubusercontent.com/u/13997703" width="150px;" height="150px;"/><br /><sub><b>Omar Yasser</b></sub>](https://github.com/omaryasser) | [<img src="https://avatars0.githubusercontent.com/u/36165800" width="150px;" height="150px;"/><br /><sub><b>Mariam Dessouki</b></sub>](https://github.com/Mariam-Dessouki) | [<img src="https://avatars0.githubusercontent.com/u/41695087" width="150px;" height="150px;"/><br /><sub><b>Daniel Schmidt</b></sub>](https://github.com/DanielSchmidt123) | [<img src="https://avatars0.githubusercontent.com/u/18689888" width="150px;" height="150px;"/><br /><sub><b>Amr M. Kayid</b></sub>](https://github.com/AmrMKayid)|
+| :---: | :---: | :---: | :---: |
