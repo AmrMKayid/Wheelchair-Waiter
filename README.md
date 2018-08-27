@@ -1,7 +1,6 @@
 <h1 align=center> Wheelchair Waiter </h1>
 <h3 align=center> 1st Place Winners @ DAAD’S GSG HACKATHON </h3>
-
-
+<h4 align=center> The project was done in Germany @ University of Duisburg-Essen sponsored by DAAD </h4>
 
 ## Overview
 Virtual Reality Application with the idea of experiencing the difficulties and hardships that face disabled people.
