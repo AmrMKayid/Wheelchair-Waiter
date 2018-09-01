@@ -21,7 +21,7 @@ Using both job simulation and body swapping we managed to create a restaurant en
 - [**Oculus SDK**](https://developer.oculus.com/): Oculus platform SDK for unity engine
 - **Oculus Rift**
 
-### Contributors:
+### Contributors: _Whyφ? Team_
 
 | [<img src="https://avatars0.githubusercontent.com/u/13997703" width="150px;" height="150px;"/><br /><sub><b>Omar Yasser</b></sub>](https://github.com/omaryasser) | [<img src="https://avatars0.githubusercontent.com/u/36165800" width="150px;" height="150px;"/><br /><sub><b>Mariam Dessouki</b></sub>](https://github.com/Mariam-Dessouki) | [<img src="https://avatars0.githubusercontent.com/u/41695087" width="150px;" height="150px;"/><br /><sub><b>Daniel Schmidt</b></sub>](https://github.com/DanielSchmidt123) | [<img src="https://avatars0.githubusercontent.com/u/18689888" width="150px;" height="150px;"/><br /><sub><b>Amr M. Kayid</b></sub>](https://github.com/AmrMKayid)|
 | :---: | :---: | :---: | :---: |
