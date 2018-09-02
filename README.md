@@ -7,7 +7,7 @@
 
 ## Overview
 Virtual Reality Application with the idea of experiencing the difficulties and hardships that face disabled people.
-Using both job simulation and body swapping we managed to create a restaurant environment where the player is the waiter and need to finish his tasks to win the game.
+Using both job simulation and body swapping we managed to create a restaurant environment where the player is the waiter and need to catch plates thrown by the chef and to deliver them to the correct tables with varying difficulties based on the disability.
 
 ### Game Levels:
 - **Normal Level**: a normal waiter receiving orders and delivering them to the corresponding tables
